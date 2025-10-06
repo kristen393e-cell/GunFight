@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gun Fight | Roblox Experience</title>
+  <style>
+    /* Background Animation */
+    @keyframes backgroundMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: radial-gradient(circle, #141414 20%, #000000 100%);
+      background-image: url('https://i.imgur.com/zB8sYwF.png');
+      background-size: 600px;
+      animation: backgroundMove 40s linear infinite;
+      color: white;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    /* Fade In Animation */
+    * {
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #ff0000, #ff8800);
+      padding: 40px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Floating 3D Text */
+    .logo {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 15px #ff8800, 0 0 30px #ff0000;
+      animation: logoSpin 6s infinite linear;
+      transform-style: preserve-3d;
+    }
+    @keyframes logoSpin {
+      0% { transform: rotateY(0deg); }
+      50% { transform: rotateY(180deg) scale(1.1); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      border-left: 6px solid #ff8800;
+      padding-left: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #00a2ff, #0078cc);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      margin-top: 25px;
+      box-shadow: 0 0 20px rgba(0,162,255,0.5);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 40px rgba(0,162,255,0.9);
+    }
+
+    /* Info Cards */
+    .updates, .community {
+      background: rgba(30, 30, 30, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.08);
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li::before {
+      content: "★ ";
+      color: #ff8800;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      box-shadow: 0 -2px 15px rgba(255,255,255,0.1);
+    }
+
+    /* Floating Particles */
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 50%;
+      animation: float 10s linear infinite;
+    }
+    @keyframes float {
+      from { transform: translateY(100vh); opacity: 0; }
+      to { transform: translateY(-10vh); opacity: 1; }
+    }
+
+    /* Play Button Glow */
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #00a2ff; }
+      50% { box-shadow: 0 0 25px #00a2ff; }
+      100% { box-shadow: 0 0 10px #00a2ff; }
+    }
+    .btn {
+      animation: glow 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔊 Gunfire Sound -->
+  <audio id="gunSound" src="https://cdn.pixabay.com/audio/2022/03/22/audio_ee45b79936.mp3" preload="auto"></audio>
+
+  <header>
+    <div class="logo">Gun Fight 🔫</div>
+    <p>The ultimate Roblox shooting experience</p>
+  </header>
+
+  <section>
+    <h2>About the Game</h2>
+    <p>
+      Step into the chaos of <strong>Gun Fight</strong> — a high-action Roblox experience where speed,
+      skill, and teamwork define victory. Engage in explosive battles, climb the leaderboard,
+      and become the ultimate gunslinger.
+    </p>
+
+    <a href="https://www.roblox.com/games/117927801121960" class="btn" target="_blank">🎮 Play on Roblox</a>
+
+    <div class="updates">
+      <h2>Latest Updates</h2>
+      <ul>
+        <li>🆕 Added neon city map with rain effects.</li>
+        <li>🔫 New weapon skins and kill effects!</li>
+        <li>🎯 Improved aiming mechanics & UI.</li>
+        <li>🐛 Fixed map glitches and respawn bugs.</li>
+      </ul>
+    </div>
+
+    <div class="community">
+      <h2>Community & Credits</h2>
+      <p>💬 Join our Discord to discuss strategies and suggest ideas!</p>
+      <p>👥 Developed by: <strong>kristen393e-cell</strong> & Team Gun Fight</p>
+      <p>⚔️ Supported by our amazing Roblox community.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Gun Fight | Made with ❤️ by kristen393e-cell</p>
+  </footer>
+
+  <script>
+    // Play sound on load
+    window.addEventListener('load', () => {
+      const sound = document.getElementById('gunSound');
+      sound.volume = 0.2;
+      sound.play().catch(() => {}); // prevents autoplay block errors
+
+      // Create floating particles
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + 'vw';
+        p.style.animationDuration = 5 + Math.random() * 8 + 's';
+        p.style.animationDelay = Math.random() * 5 + 's';
+        document.body.appendChild(p);
+      }
+    });
+  </script>
+</body>
+</html>
